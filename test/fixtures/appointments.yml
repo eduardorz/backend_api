@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2025-03-05 22:02:49
+  user: one
+  gym_class: one
+
+two:
+  date: 2025-03-05 22:02:49
+  user: two
+  gym_class: two
