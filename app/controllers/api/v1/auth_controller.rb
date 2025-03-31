@@ -20,4 +20,14 @@ class Api::V1::AuthController < ApplicationController
             render json: { error: 'Credenciales inválidas' }, status: :unauthorized 
         end 
     end
+
+    private 
+
+    def user_params 
+        params.permit(:name, :email, :password, :password_confirmation)
+    end 
+
+    def encode_token(user_id)
+        JWT.encode({ user_id: user_id, exp: 24.hours.from_now.to_i }, SECRET_KEY)
+    end
 end
